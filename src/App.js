@@ -6,7 +6,7 @@ import './index.css';
 const Button = styled.button`
   cursor: pointer;
   background: ${props => (props.primary ? 'rgba(98,0,238, 1)' : 'transparent')};
-  border: ${props => (props.text ? 'none' : '1px solid rgba(98,0,238, 1)')};
+  border: ${props => (props.outlined ? '1px solid rgba(98,0,238, 1)' : 'none')};
   border-radius: 4px;
   color: ${props => (props.primary ? '#fff' : 'rgba(98,0,238, 1)')};
   box-shadow: ${props =>
@@ -29,8 +29,7 @@ const Button = styled.button`
       props.elevated
         ? '0 5px 12px rgba(0, 0, 0, 0.25), 0 3px 3px rgba(0, 0, 0, 0.22)'
         : ''};
-    border: ${props => (props.primary ? '1px solid rgba(98,0,238, 0)' : '')};
-    transition: all 300ms ease-out;
+    transition: all 300ms cubic-bezier(0.25, 0.8, 0.25, 1);
   }
 `;
 
